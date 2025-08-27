@@ -1,0 +1,53 @@
+name: "✨ Feature Request"
+description: "Suggest a new feature or improvement"
+labels: ["type: feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Internal use.** Do not include secrets, credentials, or PII in issue text or attachments.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      placeholder: "High-level description of the feature."
+    validations:
+      required: true
+
+  - type: textarea
+    id: value
+    attributes:
+      label: "User Value / Business Need"
+      description: "What problem does this solve? Who benefits?"
+      placeholder: "As a [user], I want [feature] so that [benefit]."
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Define 'done'."
+      placeholder: |
+        - [ ] Given X, when Y, then Z
+        - [ ] Meets performance/security standards
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - "P0 – Critical"
+        - "P1 – High"
+        - "P2 – Medium"
+        - "P3 – Low"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: pii_check
+    attributes:
+      label: Data Safety Verification
+      description: Confirm that no PII, PHI, credentials, or other sensitive data is included in this issue.
+      options:
+        - label: I confirm this issue does not contain sensitive data.
+          required: true

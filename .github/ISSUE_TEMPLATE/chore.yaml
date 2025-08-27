@@ -1,0 +1,41 @@
+name: "🧹 Chore / Maintenance"
+description: "Upkeep work that keeps the system healthy"
+labels: ["type: chore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Internal use.** Do not include secrets, credentials, or PII in issue text or attachments.
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "What needs to be maintained?"
+      placeholder: "Dependency bump, CI/CD fix, code cleanup..."
+
+  - type: textarea
+    id: risk
+    attributes:
+      label: "Impact / Risk"
+      placeholder: "What happens if we don’t do this?"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority (optional)"
+      options:
+        - "Unassigned"
+        - "P0 – Critical"
+        - "P1 – High"
+        - "P2 – Medium"
+        - "P3 – Low"
+      default: 0
+
+  - type: checkboxes
+    id: pii_check
+    attributes:
+      label: Data Safety Verification
+      description: Confirm that no PII, PHI, credentials, or other sensitive data is included in this issue.
+      options:
+        - label: I confirm this issue does not contain sensitive data.
+          required: true

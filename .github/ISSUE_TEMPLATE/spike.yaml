@@ -1,0 +1,51 @@
+name: "📊 Spike / Research"
+description: "Investigate, prototype, or research to answer a question"
+labels: ["type: spike"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Internal use.** Do not include secrets, credentials, or PII in issue text or attachments.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: "Research Question"
+      placeholder: "What do we want to learn or decide?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Scope & Timebox"
+      placeholder: "Limit investigation to X hours/days."
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: "Deliverables"
+      placeholder: |
+        - Documented findings
+        - Recommendation / Next Steps
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority (optional)"
+      options:
+        - "Unassigned"
+        - "P0 – Critical"
+        - "P1 – High"
+        - "P2 – Medium"
+        - "P3 – Low"
+      default: 0
+
+  - type: checkboxes
+    id: pii_check
+    attributes:
+      label: Data Safety Verification
+      description: Confirm that no PII, PHI, credentials, or other sensitive data is included in this issue.
+      options:
+        - label: I confirm this issue does not contain sensitive data.
+          required: true
