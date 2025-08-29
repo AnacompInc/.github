@@ -7,12 +7,14 @@ This public repository provides **organization-wide defaults** (issue templates,
 ## What’s Included (current)
 
 - **Issue Templates** (`.github/ISSUE_TEMPLATE/`)
+
   - 🛠 Task – general work items
   - 🐞 Bug – defects or broken behavior
   - ✨ Feature – new functionality
   - 📊 Spike – time-boxed research/investigation
   - 🧹 Chore – maintenance and cleanup
-- **config.yml** to disable “blank issue” (applies to child repos)
+  - 💡 Proposal – potential new features or changes (including deprecations)
+  - **config.yml** to disable “blank issue” (applies to child repos)
 
 ## Purpose
 
