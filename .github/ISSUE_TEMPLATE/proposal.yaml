@@ -1,0 +1,53 @@
+name: "💡 Proposal"
+description: "Suggest a potential new feature or a change (including removing/nixing existing features)"
+labels: ["type: proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Internal use.** Do not include secrets, credentials, or PII in issue text or attachments.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "What’s the problem or need prompting this proposal?"
+      placeholder: "Explain the background or scenario…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposal"
+      description: "What new feature, change, or removal are you suggesting?"
+      placeholder: "Describe the idea or adjustment…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Rationale"
+      description: "Why would this help our users, clients, or team?"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority (optional)"
+      options:
+        - Unassigned
+        - P0 – Critical
+        - P1 – High
+        - P2 – Medium
+        - P3 – Low
+      default: 0
+
+  - type: checkboxes
+    id: pii_check
+    attributes:
+      label: Data Safety Verification
+      description: Confirm that no PII, PHI, credentials, or other sensitive data is included in this issue.
+      options:
+        - label: I confirm this issue does not contain sensitive data.
+          required: true
